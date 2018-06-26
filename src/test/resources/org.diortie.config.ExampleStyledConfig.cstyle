@@ -1,0 +1,45 @@
+## This is comment for .cstyle file, .cstyle files are used by diorite configs to define how configuration should look like in .yml file.
+## Diorite will automatically try to find .cstyle file for configuration file - but it can be also selected manually
+## It can be used both to generate comments and to set spacing, serialization styles etc.
+## empty comments like this:
+##
+## are used to create fake-spacing to make .cstyle file more readable
+## when adding comments/styles to maps/list you can use `*` key to just ignore given level.
+##
+## .cstyle files are compatible with .comments files - as .comments parser will just ignore any special data and only read comments from it
+
+# global style defaults
+@{
+  alwaysUseQuotation, ## use quotes even for simple values like `a`
+}
+
+# This is header of configuration file
+# multi-line support
+
+# this comment will appear above value
+value:
+## as there is no empty line between value and second value - there will be no empty line in final .yaml too
+# this is second value comment
+secondValue
+
+## comments can be localized - special files/handler must be provided to configuration manager to find valid values for each language/locale
+#$my.comment.path
+# default for missing locale (can be also provided via file/handler)
+withLocalizedComment:
+##
+alwaysMultiLine: multiline{spaces=2, noNewLine} ## these are default values so just "multiline" would be enough
+
+folded: folded{keepNewLines, maxLineLength=50}
+##
+mapOfObjects: {spacing=1}
+  *:
+    beanValueInt: 0x00 ## hex!
+    beanValueStringList: inline ## always use simple [a,b,c] syntax, even for long values
+  # Extra comment for this key!
+  keyB: ## if no style is provided here it will use style from wildcard element
+    beanValueStringList: unfolded
+  keyC:
+    # another extra comment
+    beanValueInt:
+inlineBean: inline
+

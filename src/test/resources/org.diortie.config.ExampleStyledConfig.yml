@@ -1,0 +1,38 @@
+# This is header of configuration file
+# multi-line support
+
+# this comment will appear above value
+value: 5
+# this is second value comment
+secondValue: 0
+
+# localized comment!
+withLocalizedComment: ~
+alwaysMultiLine: |-2
+  even if it isn't multi line
+
+folded: >+2
+  This long String will be folded to multiple lines.
+  But it can also contain own new lines.
+
+  And line at the end will be saved too.
+
+
+mapOfObjects:
+  keyA:
+    beanValueInt: 0x0A
+    beanValueStringList: ["a", "b", "c"]
+
+  # Extra comment for this key!
+  keyB:
+    beanValueInt: 0x01
+    beanValueStringList:
+    - "d"
+    - "e"
+    - "f"
+
+  keyC:
+    # another extra comment
+    beanValueInt: 0x03
+    beanValueStringList: ["g", "h", "j"]
+inlineBean: {beanValueInt: 5, beanValueStringList: ["g", "h", "j"]}

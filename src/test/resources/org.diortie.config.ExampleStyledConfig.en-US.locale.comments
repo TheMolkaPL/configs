@@ -1,0 +1,6 @@
+## file with localized comments for en-US locale
+@{
+    aliases=en-ZA,en-GB ## other locales to register for this file
+}
+# localized comment!
+withLocalizedComment:
