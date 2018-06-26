@@ -12,7 +12,7 @@ public class Tezd {
         return null;
     }
 
-    public static void main(String[] args) throws Throwable {
+    public static void main(String[] args) {
         NashornScriptEngineFactory x = new NashornScriptEngineFactory();
         ScriptEngine scriptEngine = x
             .getScriptEngine("-scripting=true", "--global-per-engine=true", "--optimistic-types=true", "--language=es6",

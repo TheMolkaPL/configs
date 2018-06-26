@@ -4,6 +4,6 @@ public enum Styles {
     AUTO,
     INLINE,
     NEXTLINE,
-    EXPLICT,
+    EXPLICIT,
     ;
 }
